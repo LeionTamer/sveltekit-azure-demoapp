@@ -1,6 +1,6 @@
-import adapter from '@sveltejs/adapter-auto';
 import azure from 'svelte-adapter-azure-swa';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import { resolve } from 'path'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,7 +9,10 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: azure()
+		adapter: azure(),
+		alias: {
+			'@styles': resolve('./src/styles') // create an alias for path styles
+		}
 	}
 };
 

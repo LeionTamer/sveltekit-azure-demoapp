@@ -1,38 +1,60 @@
-# create-svelte
+# Running the application
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Application runs with the standard `npm run dev` command
 
-## Creating a project
+# Packages
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Tailwind CSS
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+See [https://tailwindcss.com/docs/guides/sveltekit](https://tailwindcss.com/docs/guides/sveltekit) for the source material
 
-# create a new project in my-app
-npm create svelte@latest my-app
+Install the tailwind package and create a tailwind config
+
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init tailwind.config.cjs -p
 ```
 
-## Developing
+Update tailwind config with the paths to all of the config types
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{html,js,svelte,ts}'], // This is the only change
+  theme: {
+    extend: {}
+  },
+  plugins: []
+};
 ```
 
-## Building
+Create a tailwind css (ie. twbase.css) file to add the tailwind directives
 
-To create a production version of your app:
-
-```bash
-npm run build
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
-You can preview the production build with `npm run preview`.
+Optionally you can create an alias in the svelte config
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```
+import path from 'path' // require for path resolution
+kit: {
+  ...,
+  '@styles': path.resolve('./src/styles') // create an alias for path styles
+}
+```
+
+In the `src/+layout.svelte` file, import the tailwind css
+
+```
+<script lang="ts">
+  import "@styles/twbase.css"
+</script>
+
+<slot />
+<button class="rounded-lg p-3 bg-red-500"> // sample tailwind implementation
+  test tailwind
+</button>
+```

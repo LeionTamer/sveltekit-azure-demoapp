@@ -1,6 +1,18 @@
 <script lang="ts">
-  import "@styles/twbase.css"
+	import '@styles/twbase.css';
+	import Navigation from '@components/layout/topnav.svelte';
+	import Footer from '@components/layout/footer.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(async () => {
+		fetch('/api/test').then(resp => console.log(resp))
+	})
 </script>
 
-<slot />
-<button class="rounded-lg p-3 bg-red-500">test tailwind</button>
+<div class="flex flex-col h-screen justify-between">
+	<Navigation />
+	<main class="mb-auto">
+		<slot />
+	</main>
+	<Footer />
+</div>

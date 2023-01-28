@@ -33,6 +33,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@jridgewell/source-map": "^0.3.2",
+		"@jridgewell/sourcemap-codec": "^1.4.14",
 		"set-cookie-parser": "^2.5.1"
 	}
 }

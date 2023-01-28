@@ -1,9 +1,9 @@
 <script lang="ts">
-	import brekkie from '@static/images/food/brekkie.jpg';
-	import burger from '@static/images/food/burger.jpg';
-	import falafel from '@static/images/food/falafel.jpg';
-	import quiche from '@static/images/food/quiche.jpg';
-	import sandwich from '@static/images/food/sandwich.jpg';
+	import brekkie from './food/brekkie.jpg';
+	import burger from './food/burger.jpg';
+	import falafel from './food/falafel.jpg';
+	import quiche from './food/quiche.jpg';
+	import sandwich from './food/sandwich.jpg';
 </script>
 
 <section id="food">

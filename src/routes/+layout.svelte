@@ -4,7 +4,7 @@
 	import Footer from '@components/layout/footer.svelte';
 </script>
 
-<div class="flex flex-col h-screen justify-between">
+<div class="flex flex-col h-screen justify-between bg-slate-600">
 	<Navigation />
 	<main class="mb-auto">
 		<slot />

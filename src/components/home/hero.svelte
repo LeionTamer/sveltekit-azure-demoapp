@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section id="hero">
 	<div class="hero min-h-[70vh] bg-base-200">
 		<div class="hero-content  flex-col lg:flex-row-reverse">
@@ -13,3 +14,8 @@
 		</div>
 	</div>
 </section>
+=======
+<section id="hero" class='container p-6'>
+  We can be heros
+</section>
+>>>>>>> parent of 3b9260b (Daisy UI implementation)

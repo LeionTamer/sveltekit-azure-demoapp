@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<div class="navbar bg-slate-700">
-	<div class="navbar-start max-w-[1280px] mx-auto">
-		<kbd class="kbd kbd-lg">Home</kbd>
-	</div>
-</div>
-=======
 <script lang="ts">
 	const links: {
 		name: string;
@@ -17,7 +10,6 @@
 </script>
 
 <section class="bg-slate-700">
-
 	<nav class="relative container mx-auto p-6 ">
 		<div class="flex items-center justify-between">
 			{#each links as link}
@@ -27,4 +19,3 @@
 		</div>
 	</nav>
 </section>
->>>>>>> parent of 3b9260b (Daisy UI implementation)

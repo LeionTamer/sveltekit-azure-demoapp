@@ -13,7 +13,7 @@ const config = {
 		adapter: azure(),
 		alias: {
 			'@styles': resolve('./src/styles'), // create an alias for path styles
-			'@static': resolve('./src/static'),
+			// '@static': resolve('./src/static'),
 			'@components': resolve('./src/components')
 		}
 	}

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Hero from '@components/home/hero.svelte';
-	import HomeFood from '@components/home/home-food.svelte';
+	import Hero from '$lib/components/home/hero.svelte';
+	import HomeFood from '$lib/components/home/home-food.svelte';
 </script>
 
 <Hero />

@@ -15,6 +15,7 @@
 				<img src={falafel} alt="brekkie" class="object-fit-cover w-[300px]" />
 				<img src={quiche} alt="brekkie" class="object-fit-cover w-[300px]" />
 				<img src={sandwich} alt="brekkie" class="object-fit-cover w-[300px]" /> -->
+				<!-- <img src="/food/brekkie.jpg" alt="brekkie" /> -->
 				Image goes here
 			</div>
 			<div>

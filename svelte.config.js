@@ -15,8 +15,13 @@ const config = {
 		alias: {
 			'@styles': resolve('./src/styles'), // create an alias for path styles
 			'@components': resolve('./src/components')
+		},
+		files: {
+			lib: 'src/lib',
+			assets: 'static'
 		}
-	}
+	},
+
 };
 
 export default config;

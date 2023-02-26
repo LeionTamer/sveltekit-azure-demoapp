@@ -36,13 +36,19 @@ Create a tailwind css (ie. twbase.css) file to add the tailwind directives
 @tailwind utilities;
 ```
 
-Optionally you can create an alias in the svelte config
+Enable the static assets by adding the configuration for files
 
 ```
 import path from 'path' // require for path resolution
 kit: {
   ...,
-  '@styles': path.resolve('./src/styles') // create an alias for path styles
+		alias: {
+			'@styles': resolve('./src/styles'), // create an alias for path styles
+		},
+		files: {
+			lib: 'src/lib', // enables loading of static assets in the lib folder
+			assets: 'static'
+		}
 }
 ```
 
